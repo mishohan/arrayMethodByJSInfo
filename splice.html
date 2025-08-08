@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice</title>
+</head>
+<body>
+    <script>
+
+        let arr = ['I', 'go', 'home'];
+        delete arr[1]; // remove only the 2nd element
+        console.log(arr[1]); // undefined
+        console.log(arr.length) // 3
+        console.log(arr); // ['I', empty, 'home']
+
+
+        // splice: removes not just the value 
+        // but also rearrange the array
+        //ex:1
+        let array1 = ['I', 'Study', 'JavaScript'];
+        array1.splice(1, 2); // starts at index[1] and removes till index[2]
+        console.log(array1); // ['I']
+
+        //ex:2
+        let array2 = ['I', 'study', 'JavaScript', 'right', 'now'];
+        array2.splice(0, 3, "Let's", "dance"); // remove 3 first elements and replace them with another
+        console.log(array2) // ["Let's", 'dance', 'right', 'now']
+
+        //ex:3 : Can return the removed elements
+        let array3 = ['I', 'study', 'JavaScript', 'right', 'now'];
+        let removed = array3.splice(0, 2);
+        console.log(removed); // ['I', 'study']
+
+        //ex:4: Can add element without removing
+        let array4 = ['I', 'study', 'JavaScript'];
+        array4.splice(2, 0, 'complex', 'language'); // Starts at index[2], deleteCount = 0, insert element
+        console.log(array4); // ['I', 'study', 'complex', 'language', 'JavaScript']
+
+        //ex:5: Negative index allowed
+        let array5 = [1, 2, 5];
+        array5.splice(-1, 0, 3, 4); // from index[-1](5), deleteCount 0, added element 3, 4;
+        console.log(array5); // [1, 2, 3, 4, 5]
+    </script>
+</body>
+</html>
