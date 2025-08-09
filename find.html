@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find and findIndex/findLastIndex</title>
+</head>
+<body>
+    <script>
+
+        //ex-1: find
+
+        let users = [
+            {id: 1, name: 'Jhon'},
+            {id: 2, name: 'Pete'},
+            {id: 3, name: 'Mary'}
+        ];
+
+        let user1 = users.find(item => item.id == 1);
+        console.log(user1.name); // Jhon
+
+        //ex-2: findIndex and findLastIndex; -1 is returned when item's not found
+
+        let usersOf = [
+            {id: 1, name: 'Jhon'},
+            {id: 2, name: 'Pete'},
+            {id: 3, name: 'Mary'},
+            {id: 4, name: 'John'}
+        ];
+
+        console.log(usersOf.findIndex(user => user.name = 'Jhon')); // 0
+        console.log(usersOf.findLastIndex(user => user.name = 'Jhon')); // 3
+
+    </script>
+</body>
+</html>
