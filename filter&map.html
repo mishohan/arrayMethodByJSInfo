@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter & map method</title>
+</head>
+<body>
+    <script>
+
+        // filter: Goes through all element till the argument returns false
+        
+    let users = [
+            {id: 1, name: 'Jhon'},
+            {id: 2, name: 'Pete'},
+            {id: 3, name: 'Mary'}
+        ];
+
+    let someUsers = users.filter(item => item.id < 3);
+    console.log(someUsers.length); // 2 
+
+        // map: 
+
+        let lenghts = ['Bilbo', 'Gandalf', 'Nazgul'].map(item => item.length);
+        alert(lenghts);
+    </script>
+</body>
+</html>
