@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.isArray( ) & thisArg</title>
+</head>
+<body>
+    <script>
+
+        //.isArray( ): help to distinguish a plain object from an array;
+        console.log(Array.isArray({})); // false
+        console.log(Array.isArray([])); // true
+
+
+        // thisArg: All array methods except .sort() supports optional parameter thisArg
+        
+        let army = {
+            minAge: 18,
+            maxAge: 27,
+            canJoin(user) {
+                return user.age >= this.minAge && user.age < this.maxAge;
+            }
+        };
+
+        let users = [
+            {age: 16},
+            {age: 20},
+            {age: 23},
+            {age: 27},
+            {age: 30},
+        ]
+
+        let soldiers = users.filter(army.canJoin, army);
+
+        console.log(soldiers.length); // 2
+        console.log(soldiers[0]); // {age: 20}
+        console.log(soldiers[1].age) // 23
+
+    </script>
+</body>
+</html>
