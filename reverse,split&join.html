@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse, Split & Join</title>
+</head>
+<body>
+    <script>
+        //reverse
+        let arr = [1, 2, 3, 4, 5];
+        arr.reverse();
+        console.log(arr); // [5, 4, 3, 2, 1]
+
+        //split: splits the string into an array by given delimiter delim.
+        let names = 'Bilbo, Gandalf, Nazgul';
+        let array = names.split(', ');
+        console.log(array); // ['Bilbo', 'Gandalf', 'Nazgul']
+        for(let name of array){
+            console.log(`A message to ${name}.`); // A message to Bilbo (and other names)
+        }
+
+        //split method has an optional second numeric argument - a limit on the array length
+        let array1 = 'Bilbo, Gandalf, Nazgul, Sarum'.split(', ', 2);
+        console.log(array1); // ['Bilbo', 'Gandalf']; ignores everything after second element
+
+
+        //join(glue): does the reverse of split.
+        let array2 = ['Bilbo', 'Gandalf', 'Nazgul'];
+        let str = array2.join(`;`);
+        console.log(str); // Bilbo;Gandalf;Nazgul
+
+
+    </script>
+</body>
+</html>
