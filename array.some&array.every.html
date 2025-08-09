@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.some(fn)&Array.every(fn)</title>
+</head>
+<body>
+    <script>
+
+        function arraysEqual(arr1, arr2){
+            return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+        }
+        console.log(arraysEqual([1, 2], [1, 2])); //true
+
+        // arr.fill(value, start, end): fills the array with repeating value from index start to end.
+        // arr.copyWithin(target, start, end): copies its elements from position start till position end into itself, at position target (overwrites existing).
+        // arr.flat(depth)/arr.flatMap(fn) create a new flat array from a multidimensional array.
+    </script>
+</body>
+</html>

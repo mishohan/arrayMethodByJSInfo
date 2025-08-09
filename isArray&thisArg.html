@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array.isArray( ) & thisArg</title>
+    <title>Array.isArray() & thisArg</title>
 </head>
 <body>
     <script>
@@ -32,6 +32,7 @@
         ]
 
         let soldiers = users.filter(army.canJoin, army);
+        // let soldiers = users.filter(user => army.canJoin(user)); more readable
 
         console.log(soldiers.length); // 2
         console.log(soldiers[0]); // {age: 20}
